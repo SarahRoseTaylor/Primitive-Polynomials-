@@ -1,6 +1,8 @@
 def binary(x, size):
     """ Takes a number and outputs it in a binary array
     """
+    if x > 2**size-1:
+        raise Exception("SIze not large enough for binary representation")
     A = []
     for i in range(size):
         if (2**i)&x == 2**i:
@@ -89,7 +91,6 @@ def reducedANF(table,size):
                 function = function + 1
     return function    
             
-    
 if __name__ == '__main__':
     print reducedANF({0: 0, 1: 0, 2: 0, 3: 0, 4: 0,  5: 1, 6: 0, 7: 1, 8: 0, 9: 0, 10: 1, 11: 1, 12: 0, 13: 1, 14: 1, 15: 0, 16: 0, 17: 0, 18: 0, 19: 0, 20: 0, 21: 1, 22: 0, 23: 1, 24: 0, 25: 0, 26: 1, 27: 1, 28: 0, 29: 1, 30: 1, 31: 1, 32: 0, 33: 1, 34: 0, 35: 1, 36: 0, 37: 0, 38:0, 39: 0, 40: 0, 41: 1, 42: 1, 43: 0, 44: 0, 45: 0, 46: 1, 47: 1, 48: 0, 49: 1, 50: 1, 51: 0, 52: 0, 53: 0, 54: 1, 55: 1, 56: 0, 57: 1, 58: 0, 59: 1, 60: 0, 61: 0, 62: 0, 63: 1},6)   
 

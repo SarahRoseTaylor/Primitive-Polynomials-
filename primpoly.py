@@ -24,7 +24,7 @@ def polyDeg(array):
     return 0
 
 def divAlg(array1,array2):
-    """ Given two polynomials, performs the division algorithm to find the quotient and remainder of the polynomial of larger degree divided by the polynomial of smaller degree
+    """ Given two polynomials, performs the division algorithm to find the quotient and remainder of the polynomial of first the polynomial divided by the second over the field GF(2)
     """
     dif= polyDeg(array1) -polyDeg(array2)
     if dif < 0:
@@ -80,7 +80,7 @@ def primPoly(size):
                 primitives.append(poly)
     return primitives
 
-print primPoly(4)         
+#print primPoly(6)         
         
             
         
